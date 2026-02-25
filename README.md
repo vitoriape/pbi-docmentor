@@ -1,28 +1,84 @@
-**Projeto de Documentação Automática do Power BI**
+# PBI Docmentor<img src="https://snipboard.io/lGHeSi.jpg" width="10%" height="00%" align="right" valign="middle"/>
+A Python automation that creates documentation for a Power BI dashboard by extracting data from its `.pbit` file and generating a README that includes the report structure, layout and visuals, data model (tables, columns, and data types), DAX measures, data sources and relationships. 
 
-Esse projeto tem o objetivo de gerar a documentação técnica de um relatório do Power BI.
+<div align="center">
 
-Existem duas versões do código, uma utilizando apenas os arquivos JSON do relatório e outra também adicionando IA Generativa ao projeto. 
-  Eles estão acessíveis pelas pastas "Python_Version" e "IA_Version".
+![version](https://img.shields.io/badge/version-1.0-red.svg)
+![status](https://img.shields.io/badge/status-stable-006400.svg)
+![python](https://img.shields.io/badge/Python-3.12.10-navy.svg)
+![PowerBI](https://img.shields.io/badge/PowerBI-Any-yellow.svg)
 
-**Para a versão que utiliza IA, é necessário ter acesso a Azure Open AI, e ter em mãos a chave de API e endpoint.**
-  Se você participa de uma organização, você pode pedir essas informações para seu administrador de TI.
-  Caso seja uma pessoa física, você pode criar uma nova conta da Azure (https://azure.microsoft.com/pt-br/) e utilizar os créditos disponíveis por 30 dias para testar. 
-  Alternativamente, você também pode utilizar outros serviços gratuitos de IA Generativa e inclusive rodar localmente, para evitar vazamento de dados e manter a segurança de dados sensíveis.
-  **Atenção: Cuide de seus dados e  pesquise sobre os modelos antes de realizar testes com dados sensíveis, para evitar retreinar modelos com dados privados.**
+</div>
 
-É necessário, antes de executar o código:
+<details>
+    <summary>[Open/Close] Table of Contents</summary>
 
-- Transformar seu arquivo .pbix em .pbit, para fazer isso, basta abrir seu arquivo no Power BI Desktop, ir em Arquivo > Exportar > Modelo do Power BI;
-- Ter o Python baixado na sua máquina e, opcionalmente, o VSCode ou outro editor de código (utilizei o Jupyter Notebook);
-- Instalar e importar as bibliotecas necessárias (baixe o arquivo requirements para poder importar quando rodar o código);
-- Baixar o arquivo modelo em word ou utilizar o seu próprio (configurando o código conforme seu próprio modelo).
+- [PBI Docmentor](#pbi-docmentor)
+  - [📄 Disclaimer](#-disclaimer)
+  - [💡 Technologies](#-technologies)
+  - [🚀 Build and Run](#-build-and-run)
+  - [⚙️ General Settings](#️-general-settings)
+    - [📊 Set on PowerBI](#-set-on-powerbi)
+    - [▶️ Set for README](#️-set-for-readme)
+  - [📁 Expected Architecture](#-expected-architecture)
+  - [🚧 Versions](#-versions)
+
+</details>
+
+---
+
+## 📄 Disclaimer
+This project is a fork of [Julia Azevedo's](https://github.com/data-ju/Power_BI_Documentation/commits?author=data-ju) [Power_BI_Documentation](https://github.com/data-ju/Power_BI_Documentation/tree/main) project. It is a Python-only implementation, with no AI components or `.docx` files.
+
+## 💡 Technologies
+- Python (env or local)
+- PowerBI Desktop
+
+## 🚀 Build and Run
+1. Clone this repository
+2. Review `requirements.py` and install the required dependencies
+3. Follow the PowerBI [setup steps](#-set-on-powerbi) to generate the PowerBI files
+4. Follow the project [setup steps](#-set-on-project) to customize your README file
+5. Check the expected [final project architecture](#️-final-architecture)
+6. Run `main.py`
+7. Note that the table of contents in the README file only loads all sections after the file is saved
   
-O resultado final será um arquivo Word com as informações de Páginas, Tabelas, Colunas, Medidas, Fontes e Relacionamentos de tabelas do projeto.
-Caso utilize o código com IA, o resultado final será o mesmo, mas com as descrições adicionadas.
+## ⚙️ General Settings
+### 📊 Set on PowerBI
+1. Open your `.pbix` file on PowerBI Desktop
+2. Go to File > Export > PowerBI template
+3. Save `.pbit` file in this project folder
 
-Espero que goste do projeto e que ele te auxilie em sua jornada de inteligência de dados.
+### ▶️ Set for README
+1. Open `config.py` and update the variable values according to your project
 
-Qualquer dúvida, pode me acionar que te auxiliarei.
+| Variable       | Description                         |
+|----------------|-------------------------------------|
+| bi_name        | Heading of the README               |
+| bi_icon        | A JPG icon that follows the heading |
+| bi_description | Description of your BI project      |
+| proj_version   | Version of your BI project          |
+| bi_version     | Engine version of PowerBI           |
+| mkp_img        | A JPG mockup of your BI project     |
 
-**Atenção: Antes de executar o código, troque os caminhos das variáveis no arquivo config.py !**
+## 📁 Expected Architecture
+<pre><code>/pbi-docmentor
+├── {your-report}.pbit
+├── config.py
+├── main.py
+├── README.md
+├── requirements.py
+</code></pre>
+
+>---
+
+## 🚧 Versions
+
+<details>
+  <summary>[See/Hide] Version: 1.0 </summary>
+
+  ![status](https://img.shields.io/badge/status-published-black.svg)
+  ![date](https://img.shields.io/badge/date-2026/02/25-black.svg)
+
+Fork project and adapt its features
+</details>
