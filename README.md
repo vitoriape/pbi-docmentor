@@ -36,7 +36,7 @@ This project is a fork of [Julia Azevedo's](https://github.com/data-ju/Power_BI_
 
 ## 🚀 Build and Run
 1. Clone this repository
-2. Review `requirements.py` and install the required dependencies
+2. Review `requirements.txt` and install the required dependencies
 3. Follow the PowerBI [setup steps](#-set-on-powerbi) to generate the PowerBI files
 4. Follow the project [setup steps](#-set-on-project) to customize your README file
 5. Check the expected [final project architecture](#️-final-architecture)
@@ -67,7 +67,7 @@ This project is a fork of [Julia Azevedo's](https://github.com/data-ju/Power_BI_
 ├── config.py
 ├── main.py
 ├── README.md
-├── requirements.py
+├── requirements.txt
 </code></pre>
 
 >---
