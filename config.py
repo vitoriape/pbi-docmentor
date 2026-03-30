@@ -1,4 +1,3 @@
-bi_name = 'Documentação PBI' # Título
 bi_icon = "https://snipboard.io/EpYlrB.jpg" # Ícone do título
 bi_description = "Project description" # Descrição do projeto
 proj_version = "1.0" # Versão do projeto
